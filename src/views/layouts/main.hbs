@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hotwire Messager</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="module">
+        import * as Turbo from 'https://cdn.skypack.dev/@hotwired/turbo';
+
+        const wsUri = (location.protocol === 'https:' ? 'wss' : 'ws') +
+            `://${location.host}/ws`;
+
+        Turbo.session.connectStreamSource(new WebSocket(wsUri));
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+</head>
+
+<body>
+    <div style="max-width: 800px; margin: 1rem;">{{{body}}}</div>
+</body>
+
+</html>

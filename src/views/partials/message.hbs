@@ -1,0 +1,13 @@
+<turbo-stream action="append" target="messages">
+    <template>
+        <article class="message" id="message-{{message.id}}">
+            <div class="message-body">
+                <figure class="image is-48x48" style="float: right;">
+                    <img src="//robohash.org/{{message.authorId}}?size=48x48">
+                </figure>
+                <b>{{message.timestamp}}</b>
+                <p>{{message.content}}</p>
+            </div>
+        </article>
+    </template>
+</turbo-stream>
